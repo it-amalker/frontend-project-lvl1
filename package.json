@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/it-amalker/frontend-project-lvl1.git"
   },
+  "bin": {
+    "braingames": "./src/bin/brain-games.js"
+  },
   "keywords": [
     "hexlet",
     "brain",
