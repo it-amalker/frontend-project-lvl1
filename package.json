@@ -1,5 +1,5 @@
 {
-  "name": "braingames",
+  "name": "braingames-by-amalker",
   "version": "1.0.0",
   "description": "Hexlet Brain Games",
   "main": "src/bin/brain-games.js",
@@ -33,6 +33,7 @@
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
     "@babel/node": "^7.7.7",
-    "@babel/preset-env": "^7.7.7"
+    "@babel/preset-env": "^7.7.7",
+    "readline-sync": "^1.4.10"
   }
 }
