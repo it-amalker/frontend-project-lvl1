@@ -13,7 +13,8 @@
     "url": "git+https://github.com/it-amalker/frontend-project-lvl1.git"
   },
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
