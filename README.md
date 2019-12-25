@@ -7,4 +7,4 @@
 [![Build Status](https://travis-ci.com/it-amalker/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/it-amalker/frontend-project-lvl1)
 
 ### Even game (how to start the game)
-[![asciicast](https://asciinema.org/a/zdQYekXue9h4s3NsoSv1YGH8d.svg)](https://asciinema.org/a/zdQYekXue9h4s3NsoSv1YGH8d)
+[![asciicast](https://asciinema.org/a/3bgjzJRutLFcPCNdV1rGctCTC.svg)](https://asciinema.org/a/3bgjzJRutLFcPCNdV1rGctCTC)
