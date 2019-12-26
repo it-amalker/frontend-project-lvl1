@@ -6,5 +6,21 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 [![Build Status](https://travis-ci.com/it-amalker/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/it-amalker/frontend-project-lvl1)
 
-### Even game (how to start the game)
-[![asciicast](https://asciinema.org/a/3bgjzJRutLFcPCNdV1rGctCTC.svg)](https://asciinema.org/a/3bgjzJRutLFcPCNdV1rGctCTC)
+### Install game packages
+```
+$ make publish
+$ npm link
+```
+[![asciicast](https://asciinema.org/a/rkQWCRtwKt08VzTIcfOYqsNO3.svg)](https://asciinema.org/a/rkQWCRtwKt08VzTIcfOYqsNO3)
+
+### Brain Game #1. Even game
+```
+$ brain-even
+```
+[![asciicast](https://asciinema.org/a/72R6VvuKFS2FvQEsuz8ie6V78.svg)](https://asciinema.org/a/72R6VvuKFS2FvQEsuz8ie6V78)
+
+### Brain Game #2. Calc game
+```
+$ brain-calc
+```
+[![asciicast](https://asciinema.org/a/6OpaTEODvcqC0NslUofxow1az.svg)](https://asciinema.org/a/6OpaTEODvcqC0NslUofxow1az)
