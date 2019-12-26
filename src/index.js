@@ -7,6 +7,11 @@ export const getUserName = () => readlineSync.question('May I have your name? ')
 export const getUserAnswer = () => readlineSync.question('Your answer: ');
 
 export const getRandomNumber = (maxNum = 100) => Math.ceil(Math.random() * maxNum);
+export const getRandomOperator = () => {
+  const operators = '+-*';
+  const index = Math.floor(Math.random() * operators.length);
+  return operators[index];
+};
 
 export const runGame = (rules, generateTask, getCorrectAnswer) => {
   printGreeting();
