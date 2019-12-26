@@ -1,6 +1,6 @@
 {
   "name": "braingames-by-amalker",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Hexlet Brain Games",
   "main": "src/bin/brain-games.js",
   "scripts": {
@@ -14,7 +14,8 @@
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "files": [
     "dist"
