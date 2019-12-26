@@ -34,3 +34,10 @@ $ brain-calc
 $ brain-gcd
 ```
 [![asciicast](https://asciinema.org/a/NDpuVDF1AjXwfEDAAmWktfHFe.svg)](https://asciinema.org/a/NDpuVDF1AjXwfEDAAmWktfHFe)
+
+### Brain Game #4. Progression game 
+#### Find number, which is missing in the progression
+```
+$ brain-progression
+```
+[![asciicast](https://asciinema.org/a/EfOHQbOgyHHg6NdrqVGDWirB9.svg)](https://asciinema.org/a/EfOHQbOgyHHg6NdrqVGDWirB9)
