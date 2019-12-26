@@ -1,7 +1,7 @@
 {
   "name": "braingames-by-amalker",
-  "version": "0.5.0",
-  "description": "Hexlet Brain Games",
+  "version": "0.6.0",
+  "description": "Hexlet Brain Games - mini-games to train your brain",
   "main": "src/bin/brain-games.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -41,7 +41,6 @@
     "@babel/core": "^7.7.7",
     "@babel/node": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
-    "readline-sync": "^1.4.10",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
