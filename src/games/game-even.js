@@ -1,14 +1,13 @@
-#!/usr/bin/env node
 import { getRandomNumber } from '..';
 
 const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".\n';
 
 const generateNumber = () => getRandomNumber();
 
-const getAnswer = (task) => {
+const getAnswer = (number) => {
   const correctAnswer = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
-  return correctAnswer(task);
+  return correctAnswer(number);
 };
 
 export { gameRules, generateNumber, getAnswer };
