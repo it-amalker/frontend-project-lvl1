@@ -20,20 +20,20 @@ const generateProgression = () => {
 };
 
 const calcNumber = (progression) => {
-  const array = progression.split(' ');
-  const hiddenNumIndex = array.indexOf('..');
-  const lastIndex = array.length - 1;
+  const numbers = progression.split(' ');
+  const hiddenNumIndex = numbers.indexOf('..');
+  const lastIndex = numbers.length - 1;
   let result = 0;
   if (hiddenNumIndex !== 0 && hiddenNumIndex !== lastIndex) {
-    result = ((+array[hiddenNumIndex - 1]) + (+array[hiddenNumIndex + 1])) / 2;
+    result = ((+numbers[hiddenNumIndex - 1]) + (+numbers[hiddenNumIndex + 1])) / 2;
   }
   if (hiddenNumIndex === 0) {
-    const diff = ((+array[2]) - (+array[1]));
-    result = (+array[1] - diff);
+    const diff = ((+numbers[2]) - (+numbers[1]));
+    result = (+numbers[1] - diff);
   }
   if (hiddenNumIndex === lastIndex) {
-    const diff = ((+array[lastIndex - 1]) - (+array[lastIndex - 2]));
-    result = (+array[lastIndex - 1] + diff);
+    const diff = ((+numbers[lastIndex - 1]) - (+numbers[lastIndex - 2]));
+    result = (+numbers[lastIndex - 1] + diff);
   }
 
   return String(result);

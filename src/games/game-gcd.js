@@ -10,8 +10,8 @@ const generateTwoNumbers = () => {
 };
 
 const findGcd = (numbers) => {
-  const array = numbers.split(' ');
-  const [num1, num2] = array;
+  const numbersArray = numbers.split(' ');
+  const [num1, num2] = numbersArray;
   const bigger = compareNumbers(num1, num2, 'getBiggest');
   const smaller = compareNumbers(num1, num2, 'getSmallest');
   const result = 1;
