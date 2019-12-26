@@ -1,18 +1,14 @@
 #!/usr/bin/env node
 import { getRandomNumber } from '..';
 
-const maxRandomNumber = 100;
+const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".\n';
 
-export const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".\n';
+const generateNumber = () => getRandomNumber();
 
-export default () => {
-  const conditions = [];
-  const answers = [];
-  const correctAnswer = (value) => (value % 2 === 0 ? 'yes' : 'no');
-  for (let i = 0; i < 3; i += 1) {
-    conditions.push(getRandomNumber(maxRandomNumber));
-    answers.push(correctAnswer(conditions[i]));
-  }
+const getAnswer = (task) => {
+  const correctAnswer = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
-  return [conditions, answers];
+  return correctAnswer(task);
 };
+
+export { gameRules, generateNumber, getAnswer };

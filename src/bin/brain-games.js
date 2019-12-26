@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { greeting, getUserName } from '..';
+import { printGreeting, getUserName } from '..';
 
-greeting();
+printGreeting();
 console.log('');
 console.log(`Hello, ${getUserName()}!`);
