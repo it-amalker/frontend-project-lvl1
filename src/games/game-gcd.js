@@ -10,10 +10,10 @@ const generateTwoNumbers = () => {
 };
 
 const findGcd = (numbers) => {
-  const split = numbers.split(' ');
-  const [num1, num2] = split;
-  const bigger = compareNumbers(num1, num2, 'big');
-  const smaller = compareNumbers(num1, num2, 'small');
+  const array = numbers.split(' ');
+  const [num1, num2] = array;
+  const bigger = compareNumbers(num1, num2, 'getBiggest');
+  const smaller = compareNumbers(num1, num2, 'getSmallest');
   const result = 1;
   for (let i = smaller; i > 1; i -= 1) {
     if (bigger % i === 0 && smaller % i === 0) {
