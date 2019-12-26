@@ -41,3 +41,10 @@ $ brain-gcd
 $ brain-progression
 ```
 [![asciicast](https://asciinema.org/a/EfOHQbOgyHHg6NdrqVGDWirB9.svg)](https://asciinema.org/a/EfOHQbOgyHHg6NdrqVGDWirB9)
+
+### Brain Game #5. Prime game 
+#### Find out is given number is prime
+```
+$ brain-prime
+```
+[![asciicast](https://asciinema.org/a/248QkmO7BzWoZSqCfOFlxSkk8.svg)](https://asciinema.org/a/248QkmO7BzWoZSqCfOFlxSkk8)
