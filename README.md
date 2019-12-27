@@ -12,7 +12,7 @@
 $ make publish
 $ npm link
 ```
-[![asciicast](https://asciinema.org/a/rkQWCRtwKt08VzTIcfOYqsNO3.svg)](https://asciinema.org/a/rkQWCRtwKt08VzTIcfOYqsNO3)
+[![asciicast](https://asciinema.org/a/gffcIELi7csA3a0dnQIh88Ecn.svg)](https://asciinema.org/a/gffcIELi7csA3a0dnQIh88Ecn)
 
 ### Brain Game #1. Even game (is number even or not)
 #### Rather this number even or not
