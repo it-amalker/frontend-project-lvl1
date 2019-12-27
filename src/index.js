@@ -21,7 +21,7 @@ export const getRandomNumber = (maxNum = 100, round = 'ceil') => {
 
 export const getRandomOperator = () => {
   const operators = '+-*';
-  const index = Math.floor(Math.random() * operators.length);
+  const index = getRandomNumber(operators.length, 'floor');
 
   return operators[index];
 };
