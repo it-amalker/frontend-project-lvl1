@@ -8,7 +8,7 @@
 
 ### Install game packages
 #### First of all need to:
-* [Clone](https://help.github.com/en/github/using-git/which-remote-url-should-i-use#cloning-with-https-urls-recommended) repository [this](https://github.com/it-amalker/frontend-project-lvl1.git) repository
+* [Clone](https://help.github.com/en/github/using-git/which-remote-url-should-i-use#cloning-with-https-urls-recommended) [this](https://github.com/it-amalker/frontend-project-lvl1.git) repository
 * Install [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm#install--update-script)
 * Install [Node.js](https://github.com/nvm-sh/nvm#usage) with nvm:
 ```
