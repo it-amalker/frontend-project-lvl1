@@ -7,7 +7,14 @@
 [![Build Status](https://travis-ci.com/it-amalker/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/it-amalker/frontend-project-lvl1)
 
 ### Install game packages
-#### Install [Node.js](https://nodejs.org/en/download/package-manager/) and then run this commands:
+#### First of all need to:
+* [Clone](https://help.github.com/en/github/using-git/which-remote-url-should-i-use#cloning-with-https-urls-recommended) repository [this](https://github.com/it-amalker/frontend-project-lvl1.git) repository
+* Install [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm#install--update-script)
+* Install [Node.js](https://github.com/nvm-sh/nvm#usage) with nvm:
+```
+$ nvm install node
+```
+* Go to the cloned brain games directory and run these commands:
 ```
 $ make publish
 $ npm link
