@@ -1,13 +1,18 @@
-import { getRandomNumber } from '..';
+import getRandomNumber from '..';
+import runGame from '../engine';
 
-const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".\n';
+const startEvenGame = () => {
+  const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".\n';
 
-const generateNumber = () => getRandomNumber();
+  const generateGameConditions = () => {
+    const guessNumber = getRandomNumber();
+    const condition = guessNumber;
+    const answer = guessNumber % 2 === 0 ? 'yes' : 'no';
 
-const getAnswer = (number) => {
-  const correctAnswer = (num) => (num % 2 === 0 ? 'yes' : 'no');
+    return [condition, answer];
+  };
 
-  return correctAnswer(number);
+  runGame(gameRules, generateGameConditions);
 };
 
-export { gameRules, generateNumber, getAnswer };
+export default startEvenGame;

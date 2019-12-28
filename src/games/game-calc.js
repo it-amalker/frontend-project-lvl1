@@ -1,33 +1,39 @@
-import { getRandomNumber, getRandomOperator } from '..';
+import getRandomNumber from '..';
+import runGame from '../engine';
 
-const gameRules = 'What is the result of the expression?\n';
+export const getRandomOperator = () => {
+  const operators = '+-*';
+  const index = getRandomNumber(0, operators.length - 1);
 
-const generateExpression = () => {
-  const a = getRandomNumber();
-  const b = getRandomNumber();
-  const operator = getRandomOperator();
-
-  return `${a} ${operator} ${b}`;
+  return operators[index];
 };
 
-const calcExpression = (expression) => {
-  const split = expression.split(' ');
-  const [a, operator, b] = split;
-  let result = 0;
-  switch (operator) {
-    case '+':
-      result = (+a) + (+b);
-      break;
-    case '-':
-      result = (+a) - (+b);
-      break;
-    case '*':
-      result = (+a) * (+b);
-      break;
-    default:
-      console.log('No such operator.');
-  }
-  return String(result);
+const startCalcGame = () => {
+  const gameRules = 'What is the result of the expression?\n';
+
+  const generateGameConditions = () => {
+    const a = getRandomNumber();
+    const b = getRandomNumber();
+    const operator = getRandomOperator();
+    const condition = `${a} ${operator} ${b}`;
+
+    let result = 0;
+    switch (operator) {
+      case '+':
+        result = a + b;
+        break;
+      case '-':
+        result = a - b;
+        break;
+      default:
+        result = a * b;
+    }
+    const answer = String(result);
+
+    return [condition, answer];
+  };
+
+  runGame(gameRules, generateGameConditions);
 };
 
-export { gameRules, generateExpression, calcExpression };
+export default startCalcGame;

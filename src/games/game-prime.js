@@ -1,27 +1,31 @@
-#!/usr/bin/env node
-import { getRandomNumber } from '..';
+import getRandomNumber from '..';
+import runGame from '../engine';
 
-const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
+const startPrimeGame = () => {
+  const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
 
-const generateNumber = () => getRandomNumber();
+  const generateGameConditions = () => {
+    const number = getRandomNumber();
+    const condition = number;
 
-const getAnswer = (number) => {
-  const isPrime = (num) => {
-    if (num < 2) {
-      return false;
-    }
-    for (let i = 2; i < number; i += 1) {
-      if (number % i === 0) {
+    const isPrime = (num) => {
+      if (num < 2) {
         return false;
       }
-    }
+      for (let i = 2; i < number; i += 1) {
+        if (number % i === 0) {
+          return false;
+        }
+      }
 
-    return true;
+      return true;
+    };
+    const answer = isPrime(number) ? 'yes' : 'no';
+
+    return [condition, answer];
   };
 
-  const correctAnswer = (n) => (isPrime(n) ? 'yes' : 'no');
-
-  return correctAnswer(number);
+  runGame(gameRules, generateGameConditions);
 };
 
-export { gameRules, generateNumber, getAnswer };
+export default startPrimeGame;
