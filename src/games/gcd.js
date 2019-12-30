@@ -1,4 +1,4 @@
-import getRandomNumber from '..';
+import getRandomNumber from '../utils';
 import runGame from '../engine';
 
 export const compareNumbers = (num1, num2, arg = 'getBiggest') => {
