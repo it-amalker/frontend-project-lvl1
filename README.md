@@ -1,9 +1,9 @@
 # Hexlet frontend project
 
-## Brain Games (JS-project, level 1)
+## Brain Games
+### CLI app for brain training
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 [![Build Status](https://travis-ci.com/it-amalker/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/it-amalker/frontend-project-lvl1)
 
 ### Install game packages
@@ -14,54 +14,45 @@
 ```
 $ nvm install node
 ```
-* Go to the cloned brain games directory and run these commands:
+* Run these commands from cloned brain games directory:
 ```
+$ make install
 $ make publish
 $ npm link
 ```
 [![asciicast](https://asciinema.org/a/gffcIELi7csA3a0dnQIh88Ecn.svg)](https://asciinema.org/a/gffcIELi7csA3a0dnQIh88Ecn)
 
-### Brain Game #1. Even game (is number even or not)
-#### Rather this number even or not
+### Brain Game #1. Even game
+#### Try to guess, is number even or not
 ```
 $ brain-even
 ```
-[![asciicast](https://asciinema.org/a/72R6VvuKFS2FvQEsuz8ie6V78.svg)](https://asciinema.org/a/72R6VvuKFS2FvQEsuz8ie6V78)
+[![asciicast](https://asciinema.org/a/Mpwgb5mJk7Y9fhiDEVRiqPMr1.svg)](https://asciinema.org/a/Mpwgb5mJk7Y9fhiDEVRiqPMr1)
 
-[![asciicast](https://asciinema.org/a/BVCqrseL1bjjfenkFNi1ECgy0.svg)](https://asciinema.org/a/BVCqrseL1bjjfenkFNi1ECgy0)
-
-### Brain Game #2. Calc game
-#### Make calculation
+### Brain Game #2. Calculation game
+#### Try to calculate the expression
 ```
 $ brain-calc
 ```
-[![asciicast](https://asciinema.org/a/6OpaTEODvcqC0NslUofxow1az.svg)](https://asciinema.org/a/6OpaTEODvcqC0NslUofxow1az)
+[![asciicast](https://asciinema.org/a/3ebTQAorFUsn8LmarLw0D4LtD.svg)](https://asciinema.org/a/3ebTQAorFUsn8LmarLw0D4LtD)
 
-[![asciicast](https://asciinema.org/a/EDmEz44Y0HPlKXw1IgLfZeYzd.svg)](https://asciinema.org/a/EDmEz44Y0HPlKXw1IgLfZeYzd)
-
-### Brain Game #3. GCD game 
+### Brain Game #3. Greatest common divisor game 
 #### Find greatest common divisor
 ```
 $ brain-gcd
 ```
-[![asciicast](https://asciinema.org/a/NDpuVDF1AjXwfEDAAmWktfHFe.svg)](https://asciinema.org/a/NDpuVDF1AjXwfEDAAmWktfHFe)
-
-[![asciicast](https://asciinema.org/a/kHarhcb0r4PP8wAzfpZTpEtkH.svg)](https://asciinema.org/a/kHarhcb0r4PP8wAzfpZTpEtkH)
+[![asciicast](https://asciinema.org/a/mEaTtPTjOg2yBKl10NNPQLBqZ.svg)](https://asciinema.org/a/mEaTtPTjOg2yBKl10NNPQLBqZ)
 
 ### Brain Game #4. Progression game 
 #### Find number, which is missing in the progression
 ```
 $ brain-progression
 ```
-[![asciicast](https://asciinema.org/a/EfOHQbOgyHHg6NdrqVGDWirB9.svg)](https://asciinema.org/a/EfOHQbOgyHHg6NdrqVGDWirB9)
-
-[![asciicast](https://asciinema.org/a/twOQB49AFxY12SdfT9niIVcrN.svg)](https://asciinema.org/a/twOQB49AFxY12SdfT9niIVcrN)
+[![asciicast](https://asciinema.org/a/XMuZzeBXyULM2CrpDp4UHAyWZ.svg)](https://asciinema.org/a/XMuZzeBXyULM2CrpDp4UHAyWZ)
 
 ### Brain Game #5. Prime game 
 #### Find out is given number is prime
 ```
 $ brain-prime
 ```
-[![asciicast](https://asciinema.org/a/248QkmO7BzWoZSqCfOFlxSkk8.svg)](https://asciinema.org/a/248QkmO7BzWoZSqCfOFlxSkk8)
-
-[![asciicast](https://asciinema.org/a/CyEfBabiWo4XiIU8p70LHquNO.svg)](https://asciinema.org/a/CyEfBabiWo4XiIU8p70LHquNO)
+[![asciicast](https://asciinema.org/a/uXu6UzLCNezPrHlyuBloGUZJy.svg)](https://asciinema.org/a/uXu6UzLCNezPrHlyuBloGUZJy)
