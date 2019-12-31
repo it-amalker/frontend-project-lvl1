@@ -1,39 +1,38 @@
 import getRandomNumber from '../utils';
 import runGame from '../engine';
 
-export const getRandomOperator = () => {
+const gameRules = 'What is the result of the expression?';
+
+const getRandomOperator = () => {
   const operators = '+-*';
   const index = getRandomNumber(0, operators.length - 1);
 
   return operators[index];
 };
 
-const startCalcGame = () => {
-  const gameRules = 'What is the result of the expression?\n';
+const generateGameConditions = () => {
+  const num1 = getRandomNumber();
+  const num2 = getRandomNumber();
+  const operator = getRandomOperator();
+  const condition = `${num1} ${operator} ${num2}`;
+  let result = 0;
 
-  const generateGameConditions = () => {
-    const a = getRandomNumber();
-    const b = getRandomNumber();
-    const operator = getRandomOperator();
-    const condition = `${a} ${operator} ${b}`;
+  switch (operator) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    default:
+      break;
+  }
+  const answer = String(result);
 
-    let result = 0;
-    switch (operator) {
-      case '+':
-        result = a + b;
-        break;
-      case '-':
-        result = a - b;
-        break;
-      default:
-        result = a * b;
-    }
-    const answer = String(result);
-
-    return [condition, answer];
-  };
-
-  runGame(gameRules, generateGameConditions);
+  return [condition, answer];
 };
 
-export default startCalcGame;
+export default () => runGame(gameRules, generateGameConditions);

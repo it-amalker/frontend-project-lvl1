@@ -1,44 +1,33 @@
 import getRandomNumber from '../utils';
 import runGame from '../engine';
 
-export const compareNumbers = (num1, num2, arg = 'getBiggest') => {
-  let result = 0;
-  if (arg === 'getBiggest') {
-    result = (num1 >= num2 ? num1 : num2);
+const gameRules = 'Find the greatest common divisor of given numbers.';
+
+const findGreaterCommonDivisor = (number1, number2) => {
+  let bigger = number1;
+  let smaller = number2;
+  if (number1 < number2) {
+    bigger = number2;
+    smaller = number1;
   }
-  if (arg === 'getSmallest') {
-    result = (num1 >= num2 ? num2 : num1);
+  const result = 1;
+
+  for (let i = smaller; i > 1; i -= 1) {
+    if (bigger % i === 0 && smaller % i === 0) {
+      return i;
+    }
   }
 
   return result;
 };
 
-const startGcdGame = () => {
-  const gameRules = 'Find the greatest common divisor of given numbers.\n';
+const generateGameConditions = () => {
+  const num1 = getRandomNumber();
+  const num2 = getRandomNumber();
+  const condition = `${num1} ${num2}`;
+  const answer = String(findGreaterCommonDivisor(num1, num2));
 
-  const generateGameConditions = () => {
-    const a = getRandomNumber();
-    const b = getRandomNumber();
-    const condition = `${a} ${b}`;
-
-    const findGcd = (number1, number2) => {
-      const bigger = compareNumbers(number1, number2, 'getBiggest');
-      const smaller = compareNumbers(number1, number2, 'getSmallest');
-      const result = 1;
-      for (let i = smaller; i > 1; i -= 1) {
-        if (bigger % i === 0 && smaller % i === 0) {
-          return i;
-        }
-      }
-
-      return result;
-    };
-    const answer = String(findGcd(a, b));
-
-    return [condition, answer];
-  };
-
-  runGame(gameRules, generateGameConditions);
+  return [condition, answer];
 };
 
-export default startGcdGame;
+export default () => runGame(gameRules, generateGameConditions);
