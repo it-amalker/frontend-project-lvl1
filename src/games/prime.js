@@ -7,7 +7,7 @@ const isPrime = (num) => {
   if (num < 2) {
     return false;
   }
-  for (let i = 2; i < num; i += 1) {
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if (num % i === 0) {
       return false;
     }
@@ -16,9 +16,8 @@ const isPrime = (num) => {
 };
 
 const generateGameConditions = () => {
-  const number = getRandomNumber();
-  const condition = number;
-  const answer = isPrime(number) ? 'yes' : 'no';
+  const condition = `${getRandomNumber()}`;
+  const answer = isPrime(Number(condition)) ? 'yes' : 'no';
 
   return [condition, answer];
 };

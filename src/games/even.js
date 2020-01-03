@@ -6,9 +6,8 @@ const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (num) => num % 2 === 0;
 
 const generateGameConditions = () => {
-  const guessNumber = getRandomNumber();
-  const condition = guessNumber;
-  const answer = isEven(guessNumber) ? 'yes' : 'no';
+  const condition = `${getRandomNumber()}`;
+  const answer = isEven(Number(condition)) ? 'yes' : 'no';
 
   return [condition, answer];
 };

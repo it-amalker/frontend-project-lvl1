@@ -28,7 +28,7 @@ const generateGameConditions = () => {
       result = num1 * num2;
       break;
     default:
-      break;
+      return null;
   }
   const answer = String(result);
 

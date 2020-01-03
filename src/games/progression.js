@@ -12,11 +12,12 @@ const generateGameConditions = () => {
   let hiddenNumber = 0;
 
   for (let i = 0; i < progressionLength; i += 1) {
+    const currentNumber = startNumber + diff * i;
     if (i === hiddenIndex) {
       progression.push('..');
-      hiddenNumber = startNumber + diff * i;
+      hiddenNumber = currentNumber;
     } else {
-      progression.push(startNumber + diff * i);
+      progression.push(currentNumber);
     }
   }
   const condition = progression.join(' ');
