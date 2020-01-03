@@ -10,8 +10,8 @@ const runGame = (rules, generateGameConditions) => {
   console.log(`Hello, ${userName}!\n`);
 
   for (let i = 0; i < attempts; i += 1) {
-    const [taskConditions, correctAnswer] = generateGameConditions();
-    console.log(`Question: ${taskConditions}`);
+    const [question, correctAnswer] = generateGameConditions();
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
