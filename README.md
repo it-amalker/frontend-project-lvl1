@@ -3,7 +3,7 @@
 ## Brain Games
 ### CLI app for brain training
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b53c3b576b585b2cbdf3/maintainability)](https://codeclimate.com/github/it-amalker/frontend-project-lvl1/maintainability)
 [![Build Status](https://travis-ci.com/it-amalker/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/it-amalker/frontend-project-lvl1)
 
 ### Install game packages
