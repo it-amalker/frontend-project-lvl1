@@ -16,9 +16,9 @@ const isPrime = (num) => {
 };
 
 const generateGameConditions = () => {
-  const condition = getRandomNumber();
-  const answer = isPrime(condition) ? 'yes' : 'no';
-  return [condition, answer];
+  const number = getRandomNumber();
+  const answer = isPrime(number) ? 'yes' : 'no';
+  return [String(number), answer];
 };
 
 export default () => runGame(gameRules, generateGameConditions);
