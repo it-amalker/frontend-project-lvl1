@@ -30,9 +30,8 @@ const generateGameConditions = () => {
     default:
       return null;
   }
-  const answer = String(result);
 
-  return [condition, answer];
+  return [condition, String(result)];
 };
 
 export default () => runGame(gameRules, generateGameConditions);

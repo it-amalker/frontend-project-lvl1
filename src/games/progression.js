@@ -21,9 +21,8 @@ const generateGameConditions = () => {
     }
   }
   const condition = progression.join(' ');
-  const answer = String(hiddenNumber);
 
-  return [condition, answer];
+  return [condition, String(hiddenNumber)];
 };
 
 export default () => runGame(gameRules, generateGameConditions);
