@@ -1,15 +1,15 @@
 import readlineSync from 'readline-sync';
 
-const attempts = 3;
+const attemptsCount = 3;
 
-const runGame = (rules, generateGameConditions) => {
+const runGame = (description, generateGameConditions) => {
   console.log('Welcome to the Brain Games!');
-  console.log(`${rules}\n`);
+  console.log(`${description}\n`);
 
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
-  for (let i = 0; i < attempts; i += 1) {
+  for (let i = 0; i < attemptsCount; i += 1) {
     const [question, correctAnswer] = generateGameConditions();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
