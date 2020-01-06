@@ -1,28 +1,27 @@
 import getRandomNumber from '../utils';
 import runGame from '../engine';
 
-const gameRules = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
+const progressionLength = 10;
 
 const generateGameConditions = () => {
   const startNumber = getRandomNumber();
   const diff = getRandomNumber();
-  const progressionLength = 10;
-  const hiddenIndex = getRandomNumber(0, progressionLength - 1);
+  const hiddenMemberIndex = getRandomNumber(0, progressionLength - 1);
   const progression = [];
-  let hiddenNumber = 0;
+  const answer = startNumber + diff * hiddenMemberIndex;
 
   for (let i = 0; i < progressionLength; i += 1) {
     const currentNumber = startNumber + diff * i;
-    if (i === hiddenIndex) {
+    if (i === hiddenMemberIndex) {
       progression.push('..');
-      hiddenNumber = currentNumber;
     } else {
       progression.push(currentNumber);
     }
   }
-  const condition = progression.join(' ');
+  const question = progression.join(' ');
 
-  return [condition, String(hiddenNumber)];
+  return [question, String(answer)];
 };
 
-export default () => runGame(gameRules, generateGameConditions);
+export default () => runGame(description, generateGameConditions);
