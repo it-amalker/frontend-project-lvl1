@@ -3,7 +3,7 @@ import runGame from '../engine';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const findGreaterCommonDivisor = (number1, number2) => {
+export const findGreaterCommonDivisor = (number1, number2) => {
   const bigger = Math.max(number1, number2);
   const smaller = Math.min(number1, number2);
   const result = 1;

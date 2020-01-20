@@ -3,7 +3,7 @@ import runGame from '../engine';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isPrime = (num) => {
+export const isPrime = (num) => {
   if (num < 2) {
     return false;
   }

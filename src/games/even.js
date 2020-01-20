@@ -3,7 +3,7 @@ import runGame from '../engine';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (num) => num % 2 === 0;
+export const isEven = (num) => num % 2 === 0;
 
 const generateGameConditions = () => {
   const question = getRandomNumber();

@@ -4,7 +4,7 @@ import runGame from '../engine';
 const description = 'What is the result of the expression?';
 const operators = '+-*';
 
-const calculate = (num1, num2, operator) => {
+export const calculate = (num1, num2, operator) => {
   switch (operator) {
     case '+':
       return num1 + num2;
