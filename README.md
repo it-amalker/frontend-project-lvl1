@@ -20,39 +20,33 @@ $ make install
 $ make publish
 $ npm link
 ```
-[![asciicast](https://asciinema.org/a/gffcIELi7csA3a0dnQIh88Ecn.svg)](https://asciinema.org/a/gffcIELi7csA3a0dnQIh88Ecn)
+[<img src="./asciinema/install.svg">](https://asciinema.org/a/294779)
+### Choose the game from menu and start to play
+```
+$ brain-games
+```
 
 ### Brain Game #1. Even game
 #### Try to guess, is number even or not
-```
-$ brain-even
-```
-[![asciicast](https://asciinema.org/a/Mpwgb5mJk7Y9fhiDEVRiqPMr1.svg)](https://asciinema.org/a/Mpwgb5mJk7Y9fhiDEVRiqPMr1)
+
+[<img src="./asciinema/even.svg">](https://asciinema.org/a/294765)
 
 ### Brain Game #2. Calculation game
 #### Try to calculate the expression
-```
-$ brain-calc
-```
-[![asciicast](https://asciinema.org/a/3ebTQAorFUsn8LmarLw0D4LtD.svg)](https://asciinema.org/a/3ebTQAorFUsn8LmarLw0D4LtD)
+
+[<img src="./asciinema/calc.svg">](https://asciinema.org/a/294790)
 
 ### Brain Game #3. Greatest common divisor game 
 #### Find greatest common divisor
-```
-$ brain-gcd
-```
-[![asciicast](https://asciinema.org/a/mEaTtPTjOg2yBKl10NNPQLBqZ.svg)](https://asciinema.org/a/mEaTtPTjOg2yBKl10NNPQLBqZ)
+
+[<img src="./asciinema/gcd.svg">](https://asciinema.org/a/294795)
 
 ### Brain Game #4. Progression game 
 #### Find number, which is missing in the progression
-```
-$ brain-progression
-```
-[![asciicast](https://asciinema.org/a/XMuZzeBXyULM2CrpDp4UHAyWZ.svg)](https://asciinema.org/a/XMuZzeBXyULM2CrpDp4UHAyWZ)
+
+[<img src="./asciinema/progression.svg">](https://asciinema.org/a/294797)
 
 ### Brain Game #5. Prime game 
 #### Find out is given number is prime
-```
-$ brain-prime
-```
-[![asciicast](https://asciinema.org/a/uXu6UzLCNezPrHlyuBloGUZJy.svg)](https://asciinema.org/a/uXu6UzLCNezPrHlyuBloGUZJy)
+
+[<img src="./asciinema/prime.svg">](https://asciinema.org/a/294799)
