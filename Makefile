@@ -24,3 +24,6 @@ publish:
 
 lint:
 	npx eslint .
+
+test:
+	npx jest
