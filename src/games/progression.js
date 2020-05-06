@@ -2,26 +2,44 @@ import getRandomNumber from '../utils';
 import runGame from '../engine';
 
 const description = 'What number is missing in the progression?';
-const progressionLength = 10;
 
-const generateGameConditions = () => {
-  const startNumber = getRandomNumber();
-  const diff = getRandomNumber();
-  const hiddenMemberIndex = getRandomNumber(0, progressionLength - 1);
+const buildProgression = (props) => {
   const progression = [];
-  const answer = startNumber + diff * hiddenMemberIndex;
+  const {
+    start,
+    diff,
+    hiddenIndex,
+    progressionLength,
+  } = props;
 
   for (let i = 0; i < progressionLength; i += 1) {
-    const currentNumber = startNumber + diff * i;
-    if (i === hiddenMemberIndex) {
+    const currentNumber = start + diff * i;
+    if (i === hiddenIndex) {
       progression.push('..');
     } else {
       progression.push(currentNumber);
     }
   }
-  const question = progression.join(' ');
-
-  return [question, String(answer)];
+  return progression.join(' ');
 };
 
-export default () => runGame(description, generateGameConditions);
+const generateGameConditions = () => {
+  const progressionLength = 10;
+  const progressionProps = {
+    progressionLength,
+    start: getRandomNumber(),
+    diff: getRandomNumber(),
+    hiddenIndex: getRandomNumber(0, progressionLength - 1),
+  };
+  const answer = ({ start, diff, hiddenIndex }) => `${start + diff * hiddenIndex}`;
+  const question = buildProgression(progressionProps);
+
+  return [question, answer(progressionProps)];
+};
+
+const exportFunctions = {
+  buildProgression,
+  run: () => runGame(description, generateGameConditions),
+};
+
+export default exportFunctions;
