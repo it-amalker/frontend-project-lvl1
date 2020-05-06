@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import runGameEven from './games/even';
-import runGameCalc from './games/calc';
-import runGameGcd from './games/gcd';
-import runGameProgression from './games/progression';
-import runGamePrime from './games/prime';
+import gameEven from './games/even';
+import gameCalculate from './games/calc';
+import gameGcd from './games/gcd';
+import gameProgression from './games/progression';
+import gamePrime from './games/prime';
 
 export default () => {
   console.log('Welcome to the Brain Games!');
@@ -13,15 +13,15 @@ export default () => {
 
   switch (gameIndex) {
     case 0:
-      return runGameEven();
+      return gameEven.run();
     case 1:
-      return runGameCalc();
+      return gameCalculate.run();
     case 2:
-      return runGameGcd();
+      return gameGcd.run();
     case 3:
-      return runGameProgression();
+      return gameProgression.run();
     case 4:
-      return runGamePrime();
+      return gamePrime.run();
     default:
       return null;
   }
