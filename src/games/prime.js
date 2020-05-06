@@ -3,7 +3,7 @@ import runGame from '../engine';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export const isPrime = (num) => {
+const isPrime = (num) => {
   if (num < 2) {
     return false;
   }
@@ -21,4 +21,9 @@ const generateGameConditions = () => {
   return [String(question), answer];
 };
 
-export default () => runGame(description, generateGameConditions);
+const exportFunctions = {
+  isPrime,
+  run: () => runGame(description, generateGameConditions),
+};
+
+export default exportFunctions;
