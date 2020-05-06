@@ -4,7 +4,7 @@ import runGame from '../engine';
 const description = 'What is the result of the expression?';
 const operators = '+-*';
 
-export const calculate = (num1, num2, operator) => {
+const calculate = (num1, num2, operator) => {
   switch (operator) {
     case '+':
       return num1 + num2;
@@ -27,4 +27,9 @@ const generateGameConditions = () => {
   return [question, String(answer)];
 };
 
-export default () => runGame(description, generateGameConditions);
+const exportFunctions = {
+  calculate,
+  run: () => runGame(description, generateGameConditions),
+};
+
+export default exportFunctions;
