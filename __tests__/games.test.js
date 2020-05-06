@@ -1,34 +1,52 @@
-import { isEven } from '../src/games/even';
-import { calculate } from '../src/games/calc';
-import { findGreaterCommonDivisor as gcd } from '../src/games/gcd';
-import { isPrime } from '../src/games/prime';
+import gameEven from '../src/games/even';
+import gameCalc from '../src/games/calc';
+import gameGcd from '../src/games/gcd';
+import gamePrime from '../src/games/prime';
+import gameProgression from '../src/games/progression';
+
+const genProgressionProps = (length, start, diff, hiddenIndex) => (
+  {
+    progressionLength: length,
+    start,
+    diff,
+    hiddenIndex,
+  }
+);
 
 test('isEven', () => {
-  expect(isEven(4)).toBe(true);
-  expect(isEven(3)).toBe(false);
-  expect(isEven(0)).toBe(true);
+  expect(gameEven.isEven(4)).toBe(true);
+  expect(gameEven.isEven(3)).toBe(false);
+  expect(gameEven.isEven(0)).toBe(true);
 });
 
 test('calc', () => {
-  expect(calculate(4, 3, '+')).toBe(7);
-  expect(calculate(4, 3, '-')).toBe(1);
-  expect(calculate(4, 3, '*')).toBe(12);
-  expect(calculate(4, 3, '/')).toBeNull();
+  expect(gameCalc.calculate(4, 3, '+')).toBe(7);
+  expect(gameCalc.calculate(4, 3, '-')).toBe(1);
+  expect(gameCalc.calculate(4, 3, '*')).toBe(12);
+  expect(gameCalc.calculate(4, 3, '/')).toBeNull();
 });
 
 test('gcd', () => {
-  expect(gcd(20, 5)).toBe(5);
-  expect(gcd(81, 9)).toBe(9);
-  expect(gcd(8, 7)).toBe(1);
-  expect(gcd(8, 6)).toBe(2);
-  expect(gcd(21, 15)).toBe(3);
+  expect(gameGcd.findGreaterCommonDivisor(20, 5)).toBe(5);
+  expect(gameGcd.findGreaterCommonDivisor(8, 7)).toBe(1);
+  expect(gameGcd.findGreaterCommonDivisor(8, 6)).toBe(2);
 });
 
 test('prime', () => {
-  expect(isPrime(2)).toBe(true);
-  expect(isPrime(7)).toBe(true);
-  expect(isPrime(661)).toBe(true);
-  expect(isPrime(67)).toBe(true);
-  expect(isPrime(20)).toBe(false);
-  expect(isPrime(1)).toBe(false);
+  expect(gamePrime.isPrime(2)).toBe(true);
+  expect(gamePrime.isPrime(67)).toBe(true);
+  expect(gamePrime.isPrime(20)).toBe(false);
+  expect(gamePrime.isPrime(1)).toBe(false);
+});
+
+test('progression', () => {
+  expect(gameProgression
+    .buildProgression(genProgressionProps(10, 1, 5, 2)))
+    .toBe('1 6 .. 16 21 26 31 36 41 46');
+  expect(gameProgression
+    .buildProgression(genProgressionProps(5, 24, 10, 0)))
+    .toBe('.. 34 44 54 64');
+  expect(gameProgression
+    .buildProgression(genProgressionProps(5, 5, 10, 4)))
+    .toBe('5 15 25 35 ..');
 });
